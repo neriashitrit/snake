@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snake game</title>
+<style>
+
+
+
+h1 {
+  font-size: 5vmin;
+  color: black;
+  text-align: center;
+  position: relative;
+ 
+
+}
+
+body   
+{
+height: 100vh ;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+
+}
+
+#board 
+{
+background-color: darkgray;
+width: 80vmin;
+height: 80vmin;
+display: grid;
+grid-template-columns: repeat(20, 4vmin); /*<!-- the board width divided by the number of columns -->*/
+grid-template-rows: repeat(20, 4vmin);/*<!-- the board height divided by the number of rows -->*/
+}
+
+</style>
+</head>
+<body>
+ 
+  <h1>snake game 
+  <p>      
+    <div id="board"></div>
+ </p>
+ </h1>
+</body>
+</html>
