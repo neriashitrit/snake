@@ -1,5 +1,8 @@
-import{drawSnake}from './snake.js'
+import{drawSnake,updateSnake}from './snake.js'
+import{drawFood,updateFood}from './food.js'
+
 const Board = document.getElementById('board');
+//const gridSize = Board.
 
 let howManyLives = 3
 let secondsPassed;
@@ -22,8 +25,8 @@ function init (timeStamp)
     if (secondsPassed<1)return;
     oldTimeStamp = timeStamp;
    
-    //update()
-    draw()
+    update()
+    draw(Board)
     
     
 
@@ -32,20 +35,22 @@ function init (timeStamp)
 window.requestAnimationFrame(init);
 
 function update(){
+    //console.log("in update");
     updateSnake()
-    updateFood()
-    if(outsideGrid() || snakeIntersection())
+    //updateFood()
+    /*if(outsideGrid() || snakeIntersection())
     {
         howManyLives-=1
         emptySnake()
-    }
+    }*/
 }
 
-function draw()
+function draw(Board)
 {
+//console.log("in draw");
 Board.innerHTML = ''
 drawSnake(Board)
-//drawFood()
+drawFood(Board)
 
 
 
