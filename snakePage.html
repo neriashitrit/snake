@@ -7,36 +7,48 @@
   <title>snake game</title>
 <style>
 
+
+
 h1 {
   font-size: 5vmin;
   color: black;
   text-align: center;
   position: relative;
-   }
+ 
 
-body {
+}
+
+body   
+{
 height: 100vh ;
 width: 100vw;
 display: flex;
 justify-content: center;
 align-items: center;
 margin: 0;
+
 }
 
-#board{
+#board 
+{
 background-color: darkgray;
-width: 80vmin;
-height: 80vmin;
+width: 84vmin;
+height: 84vmin;
 display: grid;
-grid-template-columns: repeat(20, 4vmin); /*<!-- 4vmin = the board width divided by the number of columns -->*/
-grid-template-rows: repeat(20, 4vmin);/*<!--  4vmin = the board height divided by the number of rows -->*/
+grid-template-columns: repeat(21, 4vmin); /*<!-- the board width divided by the number of columns -->*/
+grid-template-rows: repeat(21, 4vmin);/*<!-- the board height divided by the number of rows -->*/
 }
 
 .snakepiece{
 background-color: green;
-border: .2vmin black;
+border: .4vmin solid black;
 }
-  
+
+.food{
+background-color: red;
+border: .4vmin solid black;
+}
+
 
 </style>
 <script src="http://127.0.0.1:8887/theGame.js" defer type="module"></script>
@@ -50,3 +62,4 @@ border: .2vmin black;
  </h1>
 </body>
 </html>
+
